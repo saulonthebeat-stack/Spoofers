@@ -3,9 +3,16 @@ Flask==2.3.2
 requests==2.31.0
 python-dotenv==1.0.0
 
-# Development dependencies
-pytest==7.4.0
-pytest-cov==4.1.0
-black==23.7.0
-flake8==6.0.0
-isort==5.12.0
+# Weather Dashboard
+openpyxl>=3.0.0
+
+# HWID Spoofer
+wmi>=1.5.1
+openpyxl>=3.0.0
+
+# Development
+pytest>=7.4.0
+pytest-cov>=4.1.0
+black>=23.0.0
+flake8>=6.0.0
+isort>=5.12.0
