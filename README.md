@@ -1,0 +1,2 @@
+# Spoofers
+HWID
