@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🌤️ Weather Dashboard</h1>
+            <p class="subtitle">Real-time weather information from around the world</p>
+        </header>
+
+        <nav class="navbar">
+            <div class="search-bar">
+                <input type="text" id="cityInput" placeholder="Search for a city..." class="search-input">
+                <button onclick="searchCity()" class="search-btn">Search</button>
+            </div>
+            <div class="nav-buttons">
+                <button onclick="refreshAll()" class="btn btn-primary">🔄 Refresh</button>
+                <button onclick="clearCache()" class="btn btn-secondary">🗑️ Clear Cache</button>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="weather-grid" id="weatherGrid">
+                <!-- Weather cards will be inserted here -->
+            </div>
+        </main>
+
+        <section class="forecast-section">
+            <h2>5-Day Forecast</h2>
+            <div class="forecast-chart">
+                <canvas id="forecastChart"></canvas>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2026 Weather Dashboard | Data from OpenWeatherMap</p>
+            <p id="cacheInfo">Cache: 0 cities</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
